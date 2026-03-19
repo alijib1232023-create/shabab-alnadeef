@@ -26,43 +26,13 @@ padding:30px;
 .logo{
 width:140px;
 height:140px;
-object-fit:contain;
 border-radius:50%;
 background:white;
 padding:10px;
-box-shadow:0 6px 20px rgba(0,0,0,0.25);
-border:3px solid #e5e7eb;
 }
 
-.ar{
-font-weight:bold;
-}
-
-.en{
-font-size:14px;
-color:#555;
-margin-top:5px;
-direction:ltr;
-}
-
-nav{
-background:#064e3b;
-text-align:center;
-padding:10px;
-}
-
-nav a{
-color:white;
-margin:10px;
-text-decoration:none;
-font-weight:bold;
-}
-
-.hero{
-background:#e8f5f1;
-padding:40px;
-text-align:center;
-}
+.ar{font-weight:bold;}
+.en{font-size:14px;color:#555;direction:ltr;}
 
 section{
 max-width:1100px;
@@ -78,9 +48,22 @@ box-shadow:0 3px 10px rgba(0,0,0,0.1);
 margin-bottom:20px;
 }
 
-h2{
-color:#0c7c59;
+.slider{
+position:relative;
+height:220px;
+overflow:hidden;
+border-radius:10px;
 }
+
+.slide{
+position:absolute;
+width:100%;
+height:100%;
+object-fit:cover;
+opacity:0;
+}
+
+.slide.active{opacity:1;}
 
 .progress{
 background:#ddd;
@@ -92,36 +75,6 @@ overflow:hidden;
 .progress-bar{
 background:#0c7c59;
 height:20px;
-width:30%;
-}
-
-.gallery{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:10px;
-}
-
-.gallery img{
-width:100%;
-border-radius:8px;
-}
-
-.whatsapp{
-position:fixed;
-bottom:20px;
-left:20px;
-background:#25D366;
-color:white;
-padding:12px 18px;
-border-radius:50px;
-text-decoration:none;
-}
-
-footer{
-background:#064e3b;
-color:white;
-text-align:center;
-padding:20px;
 }
 
 </style>
@@ -131,79 +84,25 @@ padding:20px;
 <body>
 
 <header>
-
 <img src="logo.png" class="logo">
-
 <h1 class="ar">شباب النضيف في الخارج</h1>
 <h3 class="en">Shabab Al-Nadeef Abroad</h3>
-
-<p class="ar">مبادرة خيرية لدعم المجتمع - جنوب دارفور</p>
-<p class="en">A charity initiative supporting communities in South Darfur</p>
-
 </header>
 
-<nav>
-<a href="#about">عن المجموعة</a>
-<a href="#projects">المشاريع</a>
-<a href="#donate">التبرع</a>
-<a href="#contact">التواصل</a>
-</nav>
-
-<div class="hero">
-
-<h2 class="ar">معاً لخدمة مجتمع النضيف</h2>
-<h3 class="en">Together for community development</h3>
-
-<p class="ar">ندعم المشاريع الصحية والتعليمية والخيرية</p>
-<p class="en">We support health, education, and humanitarian projects</p>
-
-</div>
-
-<section id="about">
+<section>
 
 <div class="card">
 
-<h2 class="ar">عن المجموعة</h2>
-<h3 class="en">About Us</h3>
+<h2 class="ar">التعاون الدولي</h2>
+<h3 class="en">International Collaboration</h3>
 
 <p class="ar">
-مبادرة تطوعية أسسها باشمهندس إدريس جبريل (أبو رهف)
-لدعم المجتمع وتنفيذ مشاريع صحية وتعليمية.
+نسعى للتعاون مع المنظمات الدولية لتقديم الدعم الإنساني وضمان وصوله للمستحقين.
 </p>
 
 <p class="en">
-A volunteer initiative founded by Eng. Idris Jibril (Abu Rahaf)
-to support communities through health and educational projects.
+We collaborate with international organizations to deliver aid and ensure it reaches the right people.
 </p>
-
-</div>
-
-</section>
-
-<section id="projects">
-
-<div class="card">
-
-<h2 class="ar">المشاريع المنجزة</h2>
-<h3 class="en">Completed Projects</h3>
-
-<p>✔ تأهيل المركز الصحي<br><span class="en">Health center renovation</span></p>
-
-<p>✔ دعم خلاوي تحفيظ القرآن<br><span class="en">Quran learning support</span></p>
-
-</div>
-
-<div class="card">
-
-<h2 class="ar">المشروع الحالي</h2>
-<h3 class="en">Current Project</h3>
-
-<p class="ar">بناء مجمع لتحفيظ القرآن الكريم</p>
-<p class="en">Building a Quran learning complex</p>
-
-<div class="progress">
-<div class="progress-bar" id="progressBar"></div>
-</div>
 
 </div>
 
@@ -213,52 +112,38 @@ to support communities through health and educational projects.
 
 <div class="card">
 
-<h2 class="ar">الداعمين</h2>
-<h3 class="en">Donors</h3>
+<h2 class="ar">المشاريع</h2>
 
-<ul id="donors"></ul>
+<div class="slider">
+<img src="health1.jpg" class="slide active">
+<img src="health2.jpg" class="slide">
+</div>
+
+<p class="ar">تأهيل المركز الصحي</p>
+<p class="en">Health Center Renovation</p>
 
 </div>
 
 </section>
 
-<section class="gallery">
-
-<img src="photo1.jpg">
-<img src="photo2.jpg">
-<img src="photo3.jpg">
-
-</section>
-
-<section id="donate">
+<section>
 
 <div class="card">
 
-<h2 class="ar">التبرع داخل السودان</h2>
-<h3 class="en">Donate in Sudan</h3>
+<h2 class="ar">التبرع</h2>
 
-<p>رقم الحساب: 3358317</p>
-
-</div>
-
-<div class="card">
-
-<h2 class="ar">التبرع من المملكة المتحدة</h2>
-<h3 class="en">Donate from the UK</h3>
-
-<p>Account Number: XXXXXXXX</p>
-<p>Sort Code: XX-XX-XX</p>
+<p>Sudan: 3358317</p>
+<p>UK: Account / Sort Code</p>
 
 </div>
 
 </section>
 
-<section id="contact">
+<section>
 
 <div class="card">
 
-<h2 class="ar">تواصل معنا</h2>
-<h3 class="en">Contact Us</h3>
+<h2 class="ar">التواصل</h2>
 
 <p>📞 00447392854343</p>
 <p>✉️ jibril1232021@hotmail.com</p>
@@ -267,66 +152,16 @@ to support communities through health and educational projects.
 
 </section>
 
-<section>
+<script>
 
-<iframe
-src="https://maps.google.com/maps?q=South%20Darfur&t=&z=6&ie=UTF8&iwloc=&output=embed"
-width="100%" height="300">
-</iframe>
+let slides = document.querySelectorAll(".slide");
+let index = 0;
 
-</section>
-
-<a class="whatsapp" href="https://wa.me/447392854343">WhatsApp</a>
-
-<footer>
-
-<p class="ar">© شباب النضيف في الخارج</p>
-<p class="en">© Shabab Al-Nadeef</p>
-
-</footer>
-
-<!-- FIREBASE -->
-
-<script type="module">
-
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
-import { getFirestore, collection, getDocs } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
-
-const firebaseConfig = {
-  apiKey: "AIzaSyBbHbx-m16cWzNVg-AsW0MwVdrk5PN3xic",
-  authDomain: "shabab-alnadeef.firebaseapp.com",
-  projectId: "shabab-alnadeef",
-  storageBucket: "shabab-alnadeef.firebasestorage.app",
-  messagingSenderId: "895918525711",
-  appId: "1:895918525711:web:e46596890b95c32cbec27a"
-};
-
-const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
-
-const donorsList = document.getElementById("donors");
-
-async function loadDonors(){
-const querySnapshot = await getDocs(collection(db, "donations"));
-
-donorsList.innerHTML = "";
-
-let total = 0;
-
-querySnapshot.forEach((doc) => {
-let d = doc.data();
-total += Number(d.amount);
-
-let li = document.createElement("li");
-li.textContent = d.name + " - " + d.amount;
-donorsList.appendChild(li);
-});
-
-let percent = (total / 6000) * 100;
-document.getElementById("progressBar").style.width = percent + "%";
-}
-
-loadDonors();
+setInterval(()=>{
+slides[index].classList.remove("active");
+index = (index + 1) % slides.length;
+slides[index].classList.add("active");
+},3000);
 
 </script>
 
