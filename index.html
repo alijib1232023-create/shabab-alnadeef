@@ -1,74 +1,129 @@
 <!DOCTYPE html>
 <html lang="ar">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>شباب النضيف في الخارج</title>
+
+<title>Shabab Al-Nadeef</title>
 
 <style>
-body {
-  font-family: Arial;
-  margin: 0;
-  background: #f5f5f5;
-  text-align: center;
+
+body{
+margin:0;
+font-family:'Segoe UI', Arial;
+background:#f5f7f9;
+direction:rtl;
 }
 
-header {
-  background: #0b6b4f;
-  color: white;
-  padding: 20px;
+header{
+background:#0c7c59;
+color:white;
+text-align:center;
+padding:30px;
 }
 
-.logo {
-  width:140px;
+.logo{
+width:140px;
 height:140px;
 object-fit:contain;
 border-radius:50%;
 background:white;
-padding:8px;
-box-shadow:0 4px 10px rgba(0,0,0,0.2);
+padding:10px;
+box-shadow:0 6px 20px rgba(0,0,0,0.25);
+border:3px solid #e5e7eb;
 }
 
-nav {
-  background: #084c38;
-  padding: 10px;
+.ar{
+font-weight:bold;
 }
 
-nav a {
-  color: white;
-  margin: 10px;
-  text-decoration: none;
-  font-weight: bold;
+.en{
+font-size:14px;
+color:#555;
+margin-top:5px;
+direction:ltr;
 }
 
-.section {
-  padding: 20px;
+nav{
+background:#064e3b;
+text-align:center;
+padding:10px;
 }
 
-.card {
-  background: white;
-  padding: 20px;
-  margin: 15px;
-  border-radius: 10px;
+nav a{
+color:white;
+margin:10px;
+text-decoration:none;
+font-weight:bold;
 }
 
-.progress {
-  background: #ddd;
-  border-radius: 20px;
-  overflow: hidden;
-  height: 25px;
+.hero{
+background:#e8f5f1;
+padding:40px;
+text-align:center;
 }
 
-.progress-bar {
-  height: 25px;
-  background: #0b6b4f;
-  width: 0%;
+section{
+max-width:1100px;
+margin:auto;
+padding:40px 20px;
 }
 
-ul {
-  list-style: none;
-  padding: 0;
+.card{
+background:white;
+padding:25px;
+border-radius:10px;
+box-shadow:0 3px 10px rgba(0,0,0,0.1);
+margin-bottom:20px;
 }
+
+h2{
+color:#0c7c59;
+}
+
+.progress{
+background:#ddd;
+height:20px;
+border-radius:20px;
+overflow:hidden;
+}
+
+.progress-bar{
+background:#0c7c59;
+height:20px;
+width:30%;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:10px;
+}
+
+.gallery img{
+width:100%;
+border-radius:8px;
+}
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+left:20px;
+background:#25D366;
+color:white;
+padding:12px 18px;
+border-radius:50px;
+text-decoration:none;
+}
+
+footer{
+background:#064e3b;
+color:white;
+text-align:center;
+padding:20px;
+}
+
 </style>
 
 </head>
@@ -76,54 +131,166 @@ ul {
 <body>
 
 <header>
+
 <img src="logo.png" class="logo">
-<h1>شباب النضيف في الخارج</h1>
-<p>مبادرة لدعم المجتمع - جنوب دارفور</p>
+
+<h1 class="ar">شباب النضيف في الخارج</h1>
+<h3 class="en">Shabab Al-Nadeef Abroad</h3>
+
+<p class="ar">مبادرة خيرية لدعم المجتمع - جنوب دارفور</p>
+<p class="en">A charity initiative supporting communities in South Darfur</p>
+
 </header>
 
 <nav>
-<a href="#">عن المجموعة</a>
-<a href="#">المشاريع</a>
-<a href="#">التبرع</a>
-<a href="#">التواصل</a>
+<a href="#about">عن المجموعة</a>
+<a href="#projects">المشاريع</a>
+<a href="#donate">التبرع</a>
+<a href="#contact">التواصل</a>
 </nav>
 
-<div class="section">
+<div class="hero">
+
+<h2 class="ar">معاً لخدمة مجتمع النضيف</h2>
+<h3 class="en">Together for community development</h3>
+
+<p class="ar">ندعم المشاريع الصحية والتعليمية والخيرية</p>
+<p class="en">We support health, education, and humanitarian projects</p>
+
+</div>
+
+<section id="about">
+
 <div class="card">
-<h2>عن المجموعة</h2>
-<p>
-مبادرة تطوعية أسسها باشمهندس إدريس جبريل (أبو رهف) لدعم المجتمع وتنفيذ مشاريع صحية وتعليمية.
+
+<h2 class="ar">عن المجموعة</h2>
+<h3 class="en">About Us</h3>
+
+<p class="ar">
+مبادرة تطوعية أسسها باشمهندس إدريس جبريل (أبو رهف)
+لدعم المجتمع وتنفيذ مشاريع صحية وتعليمية.
 </p>
+
+<p class="en">
+A volunteer initiative founded by Eng. Idris Jibril (Abu Rahaf)
+to support communities through health and educational projects.
+</p>
+
+</div>
+
+</section>
+
+<section id="projects">
+
+<div class="card">
+
+<h2 class="ar">المشاريع المنجزة</h2>
+<h3 class="en">Completed Projects</h3>
+
+<p>✔ تأهيل المركز الصحي<br><span class="en">Health center renovation</span></p>
+
+<p>✔ دعم خلاوي تحفيظ القرآن<br><span class="en">Quran learning support</span></p>
+
 </div>
 
 <div class="card">
-<h2>المشروع الحالي</h2>
-<p>تأهيل المركز الصحي</p>
+
+<h2 class="ar">المشروع الحالي</h2>
+<h3 class="en">Current Project</h3>
+
+<p class="ar">بناء مجمع لتحفيظ القرآن الكريم</p>
+<p class="en">Building a Quran learning complex</p>
 
 <div class="progress">
-<div class="progress-bar"></div>
+<div class="progress-bar" id="progressBar"></div>
 </div>
 
 </div>
+
+</section>
+
+<section>
 
 <div class="card">
-<h2>الداعمين | Donors</h2>
+
+<h2 class="ar">الداعمين</h2>
+<h3 class="en">Donors</h3>
+
 <ul id="donors"></ul>
+
+</div>
+
+</section>
+
+<section class="gallery">
+
+<img src="photo1.jpg">
+<img src="photo2.jpg">
+<img src="photo3.jpg">
+
+</section>
+
+<section id="donate">
+
+<div class="card">
+
+<h2 class="ar">التبرع داخل السودان</h2>
+<h3 class="en">Donate in Sudan</h3>
+
+<p>رقم الحساب: 3358317</p>
+
 </div>
 
 <div class="card">
-<h2>تواصل معنا</h2>
-<p>📞 00447392854343</p>
-<p>📧 jibril1232021@hotmail.com</p>
-</div>
+
+<h2 class="ar">التبرع من المملكة المتحدة</h2>
+<h3 class="en">Donate from the UK</h3>
+
+<p>Account Number: XXXXXXXX</p>
+<p>Sort Code: XX-XX-XX</p>
 
 </div>
+
+</section>
+
+<section id="contact">
+
+<div class="card">
+
+<h2 class="ar">تواصل معنا</h2>
+<h3 class="en">Contact Us</h3>
+
+<p>📞 00447392854343</p>
+<p>✉️ jibril1232021@hotmail.com</p>
+
+</div>
+
+</section>
+
+<section>
+
+<iframe
+src="https://maps.google.com/maps?q=South%20Darfur&t=&z=6&ie=UTF8&iwloc=&output=embed"
+width="100%" height="300">
+</iframe>
+
+</section>
+
+<a class="whatsapp" href="https://wa.me/447392854343">WhatsApp</a>
+
+<footer>
+
+<p class="ar">© شباب النضيف في الخارج</p>
+<p class="en">© Shabab Al-Nadeef</p>
+
+</footer>
 
 <!-- FIREBASE -->
+
 <script type="module">
 
-import { initializeApp } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-app.js";
-import { getFirestore, collection, getDocs } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-firestore.js";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+import { getFirestore, collection, getDocs } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
 
 const firebaseConfig = {
   apiKey: "AIzaSyBbHbx-m16cWzNVg-AsW0MwVdrk5PN3xic",
@@ -131,32 +298,35 @@ const firebaseConfig = {
   projectId: "shabab-alnadeef",
   storageBucket: "shabab-alnadeef.firebasestorage.app",
   messagingSenderId: "895918525711",
-  appId: "1:895918525711:web:fe3ef7cc5269e8f0bec27a"
+  appId: "1:895918525711:web:e46596890b95c32cbec27a"
 };
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
-// Load Donations
-const list = document.getElementById("donors");
+const donorsList = document.getElementById("donors");
 
-getDocs(collection(db, "donations")).then(snapshot => {
-  snapshot.forEach(doc => {
-    let d = doc.data();
-    let li = document.createElement("li");
-    li.textContent = d.name + " - " + d.amount;
-    list.appendChild(li);
-  });
+async function loadDonors(){
+const querySnapshot = await getDocs(collection(db, "donations"));
+
+donorsList.innerHTML = "";
+
+let total = 0;
+
+querySnapshot.forEach((doc) => {
+let d = doc.data();
+total += Number(d.amount);
+
+let li = document.createElement("li");
+li.textContent = d.name + " - " + d.amount;
+donorsList.appendChild(li);
 });
 
-// Load Progress
-getDocs(collection(db, "project")).then(snapshot => {
-  snapshot.forEach(doc => {
-    let data = doc.data();
-    let percent = (data.collected / data.goal) * 100;
-    document.querySelector(".progress-bar").style.width = percent + "%";
-  });
-});
+let percent = (total / 6000) * 100;
+document.getElementById("progressBar").style.width = percent + "%";
+}
+
+loadDonors();
 
 </script>
 
