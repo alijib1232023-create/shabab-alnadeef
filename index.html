@@ -1,20 +1,70 @@
-
 <!DOCTYPE html>
 <html lang="ar">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>شباب النضيف في الخارج</title>
+
 <style>
-body{font-family:Arial;margin:0;background:#f4f6f8;direction:rtl}
-header{background:#0c7c59;color:white;text-align:center;padding:40px}
-.logo{width:120px;margin-bottom:10px}
-nav{background:#064e3b;text-align:center;padding:15px}
-nav a{color:white;margin:10px;text-decoration:none;font-weight:bold}
-section{max-width:1100px;margin:auto;padding:40px}
-.card{background:white;padding:25px;margin-bottom:20px;border-radius:10px;box-shadow:0 3px 10px rgba(0,0,0,0.1)}
-footer{background:#064e3b;color:white;text-align:center;padding:20px}
+body {
+  font-family: Arial;
+  margin: 0;
+  background: #f5f5f5;
+  text-align: center;
+}
+
+header {
+  background: #0b6b4f;
+  color: white;
+  padding: 20px;
+}
+
+.logo {
+  width: 120px;
+}
+
+nav {
+  background: #084c38;
+  padding: 10px;
+}
+
+nav a {
+  color: white;
+  margin: 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.section {
+  padding: 20px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  margin: 15px;
+  border-radius: 10px;
+}
+
+.progress {
+  background: #ddd;
+  border-radius: 20px;
+  overflow: hidden;
+  height: 25px;
+}
+
+.progress-bar {
+  height: 25px;
+  background: #0b6b4f;
+  width: 0%;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
 </style>
+
 </head>
 
 <body>
@@ -22,61 +72,87 @@ footer{background:#064e3b;color:white;text-align:center;padding:20px}
 <header>
 <img src="logo.png" class="logo">
 <h1>شباب النضيف في الخارج</h1>
-<p>مبادرة خيرية لدعم المجتمع في وحدة النضيف الإدارية - ولاية جنوب دارفور</p>
+<p>مبادرة لدعم المجتمع - جنوب دارفور</p>
 </header>
 
 <nav>
-<a href="#about">عن المجموعة</a>
-<a href="#projects">المشاريع</a>
-<a href="#donate">التبرع</a>
-<a href="#contact">التواصل</a>
+<a href="#">عن المجموعة</a>
+<a href="#">المشاريع</a>
+<a href="#">التبرع</a>
+<a href="#">التواصل</a>
 </nav>
 
-<section id="about">
+<div class="section">
 <div class="card">
 <h2>عن المجموعة</h2>
 <p>
-مبادرة تطوعية أسسها باشمهندس إدريس جبريل (أبو رهف) لدعم المجتمع
-وتنفيذ مشاريع صحية وتعليمية في منطقة النضيف.
+مبادرة تطوعية أسسها باشمهندس إدريس جبريل (أبو رهف) لدعم المجتمع وتنفيذ مشاريع صحية وتعليمية.
 </p>
 </div>
-</section>
 
-<section id="projects">
 <div class="card">
-<h2>المشاريع المنجزة</h2>
-<p>✔ تأهيل المركز الصحي وحدة النضيف الإدارية</p>
-<p>✔ شراء مصاحف وألواح لمجمع قندول لتحفيظ القرآن الكريم</p>
+<h2>المشروع الحالي</h2>
+<p>تأهيل المركز الصحي</p>
+
+<div class="progress">
+<div class="progress-bar"></div>
 </div>
-</section>
 
-<section id="donate">
-<div class="card">
-<h2>التبرع داخل السودان</h2>
-<p>الاسم: باسم / عوض علي أحمد</p>
-<p>رقم الحساب: 3358317</p>
 </div>
 
 <div class="card">
-<h2>التبرع من المملكة المتحدة</h2>
-<p>اسم الحساب: YOUR NAME</p>
-<p>اسم البنك: YOUR BANK</p>
-<p>Account Number: XXXXXXXX</p>
-<p>Sort Code: XX-XX-XX</p>
+<h2>الداعمين | Donors</h2>
+<ul id="donors"></ul>
 </div>
-</section>
 
-<section id="contact">
 <div class="card">
 <h2>تواصل معنا</h2>
 <p>📞 00447392854343</p>
-<p>✉️ jibril1232021@hotmail.com</p>
+<p>📧 jibril1232021@hotmail.com</p>
 </div>
-</section>
 
-<footer>
-<p>© شباب النضيف في الخارج</p>
-</footer>
+</div>
+
+<!-- FIREBASE -->
+<script type="module">
+
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-app.js";
+import { getFirestore, collection, getDocs } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-firestore.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyBbHbx-m16cWzNVg-AsW0MwVdrk5PN3xic",
+  authDomain: "shabab-alnadeef.firebaseapp.com",
+  projectId: "shabab-alnadeef",
+  storageBucket: "shabab-alnadeef.firebasestorage.app",
+  messagingSenderId: "895918525711",
+  appId: "1:895918525711:web:fe3ef7cc5269e8f0bec27a"
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
+// Load Donations
+const list = document.getElementById("donors");
+
+getDocs(collection(db, "donations")).then(snapshot => {
+  snapshot.forEach(doc => {
+    let d = doc.data();
+    let li = document.createElement("li");
+    li.textContent = d.name + " - " + d.amount;
+    list.appendChild(li);
+  });
+});
+
+// Load Progress
+getDocs(collection(db, "project")).then(snapshot => {
+  snapshot.forEach(doc => {
+    let data = doc.data();
+    let percent = (data.collected / data.goal) * 100;
+    document.querySelector(".progress-bar").style.width = percent + "%";
+  });
+});
+
+</script>
 
 </body>
 </html>
