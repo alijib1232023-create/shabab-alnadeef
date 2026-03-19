@@ -34,6 +34,19 @@ padding:10px;
 .ar{font-weight:bold;}
 .en{font-size:14px;color:#555;direction:ltr;}
 
+nav{
+background:#064e3b;
+text-align:center;
+padding:10px;
+}
+
+nav a{
+color:white;
+margin:10px;
+text-decoration:none;
+font-weight:bold;
+}
+
 section{
 max-width:1100px;
 margin:auto;
@@ -61,20 +74,53 @@ width:100%;
 height:100%;
 object-fit:cover;
 opacity:0;
+transition:0.5s;
 }
 
 .slide.active{opacity:1;}
+
+.project-item{text-align:center;margin-top:20px;}
 
 .progress{
 background:#ddd;
 height:20px;
 border-radius:20px;
 overflow:hidden;
+margin-top:10px;
 }
 
 .progress-bar{
 background:#0c7c59;
 height:20px;
+width:30%;
+}
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+left:20px;
+background:#25D366;
+color:white;
+padding:12px 18px;
+border-radius:50px;
+text-decoration:none;
+}
+
+footer{
+background:#064e3b;
+color:white;
+text-align:center;
+padding:20px;
+}
+
+.download-btn{
+display:inline-block;
+background:#0c7c59;
+color:white;
+padding:12px 20px;
+border-radius:8px;
+text-decoration:none;
+margin-top:20px;
 }
 
 </style>
@@ -84,17 +130,126 @@ height:20px;
 <body>
 
 <header>
+
 <img src="logo.png" class="logo">
+
 <h1 class="ar">شباب النضيف في الخارج</h1>
 <h3 class="en">Shabab Al-Nadeef Abroad</h3>
+
+<p class="ar">مبادرة خيرية لدعم المجتمع - جنوب دارفور</p>
+<p class="en">Charity initiative supporting South Darfur</p>
+
 </header>
+
+<nav>
+<a href="#projects">المشاريع</a>
+<a href="#donate">التبرع</a>
+<a href="#partnership">الشراكة</a>
+<a href="#contact">التواصل</a>
+</nav>
+
+<!-- PROJECTS -->
+
+<section id="projects">
+
+<div class="card">
+
+<h2 class="ar">المشاريع المنجزة</h2>
+<h3 class="en">Completed Projects</h3>
+
+<div class="project-item">
+
+<div class="slider">
+<img src="health1.jpg" class="slide active">
+<img src="health2.jpg" class="slide">
+</div>
+
+<p class="ar">✔ تأهيل المركز الصحي</p>
+<p class="en">Health center renovation</p>
+
+</div>
+
+<div class="project-item">
+
+<div class="slider">
+<img src="quran1.jpg" class="slide active">
+<img src="quran2.jpg" class="slide">
+</div>
+
+<p class="ar">✔ دعم خلاوي تحفيظ القرآن</p>
+<p class="en">Quran learning support</p>
+
+</div>
+
+</div>
+
+<!-- NEW PROJECT -->
+
+<div class="card">
+
+<h2 class="ar">مشروع جديد</h2>
+<h3 class="en">New Project</h3>
+
+<div class="project-item">
+
+<div class="slider">
+<img src="new1.jpg" class="slide active">
+<img src="new2.jpg" class="slide">
+</div>
+
+<p class="ar">اسم المشروع الجديد</p>
+<p class="en">New Project Name</p>
+
+<div class="progress">
+<div class="progress-bar" id="progressBar"></div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- DONORS -->
 
 <section>
 
 <div class="card">
 
+<h2 class="ar">الداعمين</h2>
+<h3 class="en">Donors</h3>
+
+<ul id="donors"></ul>
+
+</div>
+
+</section>
+
+<!-- DONATE -->
+
+<section id="donate">
+
+<div class="card">
+<h2 class="ar">التبرع داخل السودان</h2>
+<p>3358317</p>
+</div>
+
+<div class="card">
+<h2 class="ar">التبرع من المملكة المتحدة</h2>
+<p>Account Number: XXXXX</p>
+<p>Sort Code: XX-XX-XX</p>
+</div>
+
+</section>
+
+<!-- PARTNERSHIP -->
+
+<section id="partnership">
+
+<div class="card">
+
 <h2 class="ar">التعاون الدولي</h2>
-<h3 class="en">International Collaboration</h3>
+<h3 class="en">International Partnership</h3>
 
 <p class="ar">
 نسعى للتعاون مع المنظمات الدولية لتقديم الدعم الإنساني وضمان وصوله للمستحقين.
@@ -108,42 +263,13 @@ We collaborate with international organizations to deliver aid and ensure it rea
 
 </section>
 
-<section>
+<!-- CONTACT -->
+
+<section id="contact">
 
 <div class="card">
 
-<h2 class="ar">المشاريع</h2>
-
-<div class="slider">
-<img src="health1.jpg" class="slide active">
-<img src="health2.jpg" class="slide">
-</div>
-
-<p class="ar">تأهيل المركز الصحي</p>
-<p class="en">Health Center Renovation</p>
-
-</div>
-
-</section>
-
-<section>
-
-<div class="card">
-
-<h2 class="ar">التبرع</h2>
-
-<p>Sudan: 3358317</p>
-<p>UK: Account / Sort Code</p>
-
-</div>
-
-</section>
-
-<section>
-
-<div class="card">
-
-<h2 class="ar">التواصل</h2>
+<h2 class="ar">تواصل معنا</h2>
 
 <p>📞 00447392854343</p>
 <p>✉️ jibril1232021@hotmail.com</p>
@@ -152,9 +278,42 @@ We collaborate with international organizations to deliver aid and ensure it rea
 
 </section>
 
-<script>
+<!-- MAP -->
 
-let slides = document.querySelectorAll(".slide");
+<section>
+
+<iframe
+src="https://maps.google.com/maps?q=South%20Darfur&t=&z=6&ie=UTF8&iwloc=&output=embed"
+width="100%" height="300">
+</iframe>
+
+</section>
+
+<!-- DOWNLOAD BUTTON -->
+
+<section style="text-align:center;">
+
+<a href="Shabab_Al_Nadeef_Proposal.pdf" target="_blank" class="download-btn">
+📄 Download Full Proposal
+</a>
+
+</section>
+
+<a class="whatsapp" href="https://wa.me/447392854343">WhatsApp</a>
+
+<footer>
+
+<p>© Shabab Al-Nadeef</p>
+
+</footer>
+
+<!-- SLIDER -->
+
+<script>
+let sliders = document.querySelectorAll(".slider");
+
+sliders.forEach(slider => {
+let slides = slider.querySelectorAll(".slide");
 let index = 0;
 
 setInterval(()=>{
@@ -162,6 +321,46 @@ slides[index].classList.remove("active");
 index = (index + 1) % slides.length;
 slides[index].classList.add("active");
 },3000);
+});
+</script>
+
+<!-- FIREBASE -->
+
+<script type="module">
+
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+import { getFirestore, collection, getDocs } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyBbHbx-m16cWzNVg-AsW0MwVdrk5PN3xic",
+  authDomain: "shabab-alnadeef.firebaseapp.com",
+  projectId: "shabab-alnadeef"
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
+const donorsList = document.getElementById("donors");
+
+async function loadDonors(){
+const querySnapshot = await getDocs(collection(db, "donations"));
+
+let total = 0;
+
+querySnapshot.forEach((doc) => {
+let d = doc.data();
+total += Number(d.amount);
+
+let li = document.createElement("li");
+li.textContent = d.name + " - " + d.amount;
+donorsList.appendChild(li);
+});
+
+let percent = (total / 6000) * 100;
+document.getElementById("progressBar").style.width = percent + "%";
+}
+
+loadDonors();
 
 </script>
 
