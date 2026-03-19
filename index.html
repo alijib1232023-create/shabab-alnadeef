@@ -16,6 +16,7 @@ background:#f5f7f9;
 direction:rtl;
 }
 
+/* HEADER */
 header{
 background:#0c7c59;
 color:white;
@@ -31,13 +32,19 @@ background:white;
 padding:10px;
 }
 
-.ar{font-weight:bold;}
-.en{  .en {
-  font-size: 16px;
-  color: #ffffff;
-  opacity: 0.9;
-} ;}
+/* TEXT */
+.ar{
+font-weight:bold;
+color:white;
+}
 
+.en{
+font-size:16px;
+color:#e0f2f1;
+direction:ltr;
+}
+
+/* NAV */
 nav{
 background:#064e3b;
 text-align:center;
@@ -51,6 +58,7 @@ text-decoration:none;
 font-weight:bold;
 }
 
+/* SECTIONS */
 section{
 max-width:1100px;
 margin:auto;
@@ -65,6 +73,7 @@ box-shadow:0 3px 10px rgba(0,0,0,0.1);
 margin-bottom:20px;
 }
 
+/* SLIDER */
 .slider{
 position:relative;
 height:220px;
@@ -85,6 +94,7 @@ transition:0.5s;
 
 .project-item{text-align:center;margin-top:20px;}
 
+/* PROGRESS */
 .progress{
 background:#ddd;
 height:20px;
@@ -99,6 +109,28 @@ height:20px;
 width:30%;
 }
 
+/* TEAM */
+.team-container{
+display:flex;
+flex-wrap:wrap;
+gap:20px;
+justify-content:center;
+}
+
+.team-member{
+text-align:center;
+max-width:250px;
+}
+
+.team-img{
+width:150px;
+height:150px;
+border-radius:50%;
+object-fit:cover;
+border:4px solid #0c7c59;
+}
+
+/* WHATSAPP */
 .whatsapp{
 position:fixed;
 bottom:20px;
@@ -110,6 +142,7 @@ border-radius:50px;
 text-decoration:none;
 }
 
+/* FOOTER */
 footer{
 background:#064e3b;
 color:white;
@@ -140,11 +173,21 @@ margin-top:20px;
 <h1 class="ar">شباب النضيف في الخارج</h1>
 <h3 class="en">Shabab Al-Nadeef Abroad</h3>
 
-<p class="ar"> هي مبادرة مجتمعية تهدف إلى دعم المجتمع المحلي في وحدة النضيف الإدارية من خلال مشاريع صحية وتعليمية وإنسانية</p>
-<p class="en">  It is a community initiative aimed at supporting the local community in the Al-Nazif administrative unit through health, educational, and humanitarian projects</p> </header>
+<p class="ar">
+هي مبادرة مجتمعية تهدف إلى دعم المجتمع المحلي في وحدة النضيف الإدارية
+من خلال مشاريع صحية وتعليمية وإنسانية
+</p>
+
+<p class="en">
+A community initiative supporting the local community in Al-Nazif
+through health, educational and humanitarian projects
+</p>
+
+</header>
 
 <nav>
 <a href="#projects">المشاريع</a>
+<a href="#team">الفريق</a>
 <a href="#donate">التبرع</a>
 <a href="#partnership">الشراكة</a>
 <a href="#contact">التواصل</a>
@@ -156,8 +199,7 @@ margin-top:20px;
 
 <div class="card">
 
-<h2 class="ar">المشاريع المنجزة</h2>
-<h3 class="en">Completed Projects</h3>
+<h2>المشاريع | Projects</h2>
 
 <div class="project-item">
 
@@ -166,8 +208,7 @@ margin-top:20px;
 <img src="health2.jpg" class="slide">
 </div>
 
-<p class="ar">✔ تأهيل المركز الصحي</p>
-<p class="en">Health center renovation</p>
+<p>✔ تأهيل المركز الصحي<br>Health center renovation</p>
 
 </div>
 
@@ -178,8 +219,7 @@ margin-top:20px;
 <img src="quran2.jpg" class="slide">
 </div>
 
-<p class="ar">✔ دعم خلاوي تحفيظ القرآن</p>
-<p class="en">Quran learning support</p>
+<p>✔ دعم خلاوي تحفيظ القرآن<br>Quran learning support</p>
 
 </div>
 
@@ -189,8 +229,7 @@ margin-top:20px;
 
 <div class="card">
 
-<h2 class="ar">مشروع جديد</h2>
-<h3 class="en">New Project</h3>
+<h2>المشروع الحالي | Current Project</h2>
 
 <div class="project-item">
 
@@ -199,8 +238,7 @@ margin-top:20px;
 <img src="new2.jpg" class="slide">
 </div>
 
-<p class="ar">اسم المشروع الجديد</p>
-<p class="en">New Project Name</p>
+<p>مشروع جديد<br>New Project</p>
 
 <div class="progress">
 <div class="progress-bar" id="progressBar"></div>
@@ -212,16 +250,31 @@ margin-top:20px;
 
 </section>
 
-<!-- DONORS -->
+<!-- TEAM -->
 
-<section>
+<section id="team">
 
 <div class="card">
 
-<h2 class="ar">الداعمين</h2>
-<h3 class="en">Donors</h3>
+<h2>فريق العمل | Our Team</h2>
 
-<ul id="donors"></ul>
+<div class="team-container">
+
+<div class="team-member">
+<img src="idris.jpg" class="team-img">
+<h3>باشمهندس إدريس جبريل</h3>
+<p>Eng. Idris Jibril</p>
+<p>Founder</p>
+</div>
+
+<div class="team-member">
+<img src="ishraq.jpg" class="team-img">
+<h3>إشراق جلال الدين إبراهيم</h3>
+<p>Ishraq Jalal Al-Deen Ibrahim</p>
+<p>Co-Founder</p>
+</div>
+
+</div>
 
 </div>
 
@@ -232,12 +285,12 @@ margin-top:20px;
 <section id="donate">
 
 <div class="card">
-<h2 class="ar">التبرع داخل السودان</h2>
+<h2>التبرع داخل السودان</h2>
 <p>3358317</p>
 </div>
 
 <div class="card">
-<h2 class="ar">التبرع من المملكة المتحدة</h2>
+<h2>UK Donations</h2>
 <p>Account Number: 21252132</p>
 <p>Sort Code: 09-01-29</p>
 </div>
@@ -250,15 +303,12 @@ margin-top:20px;
 
 <div class="card">
 
-<h2 class="ar">التعاون الدولي</h2>
-<h3 class="en">International Partnership</h3>
+<h2>التعاون الدولي | International Partnership</h2>
 
-<p class="ar">
+<p>
 نسعى للتعاون مع المنظمات الدولية لتقديم الدعم الإنساني وضمان وصوله للمستحقين.
-</p>
-
-<p class="en">
-We collaborate with international organizations to deliver aid and ensure it reaches the right people.
+<br>
+We collaborate with international organizations to deliver aid effectively.
 </p>
 
 </div>
@@ -271,7 +321,7 @@ We collaborate with international organizations to deliver aid and ensure it rea
 
 <div class="card">
 
-<h2 class="ar">تواصل معنا</h2>
+<h2>تواصل معنا | Contact</h2>
 
 <p>📞 00447392854343</p>
 <p>✉️ jibril1232021@hotmail.com</p>
@@ -283,88 +333,40 @@ We collaborate with international organizations to deliver aid and ensure it rea
 <!-- MAP -->
 
 <section>
-
 <iframe
 src="https://maps.google.com/maps?q=South%20Darfur&t=&z=6&ie=UTF8&iwloc=&output=embed"
 width="100%" height="300">
 </iframe>
-
 </section>
 
-<!-- DOWNLOAD BUTTON -->
+<!-- DOWNLOAD -->
 
 <section style="text-align:center;">
-
 <a href="Shabab_Al_Nadeef_Proposal.pdf" target="_blank" class="download-btn">
-📄 Download Full Proposal
+📄 Download Proposal
 </a>
-
 </section>
 
 <a class="whatsapp" href="https://wa.me/447392854343">WhatsApp</a>
 
 <footer>
-
 <p>© Shabab Al-Nadeef</p>
-
 </footer>
 
-<!-- SLIDER -->
+<!-- SLIDER SCRIPT -->
 
 <script>
-let sliders = document.querySelectorAll(".slider");
-
-sliders.forEach(slider => {
+document.querySelectorAll(".slider").forEach(slider => {
 let slides = slider.querySelectorAll(".slide");
-let index = 0;
+let i = 0;
 
 setInterval(()=>{
-slides[index].classList.remove("active");
-index = (index + 1) % slides.length;
-slides[index].classList.add("active");
+slides[i].classList.remove("active");
+i = (i + 1) % slides.length;
+slides[i].classList.add("active");
 },3000);
 });
 </script>
 
-<!-- FIREBASE -->
-
-<script type="module">
-
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
-import { getFirestore, collection, getDocs } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
-
-const firebaseConfig = {
-  apiKey: "AIzaSyBbHbx-m16cWzNVg-AsW0MwVdrk5PN3xic",
-  authDomain: "shabab-alnadeef.firebaseapp.com",
-  projectId: "shabab-alnadeef"
-};
-
-const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
-
-const donorsList = document.getElementById("donors");
-
-async function loadDonors(){
-const querySnapshot = await getDocs(collection(db, "donations"));
-
-let total = 0;
-
-querySnapshot.forEach((doc) => {
-let d = doc.data();
-total += Number(d.amount);
-
-let li = document.createElement("li");
-li.textContent = d.name + " - " + d.amount;
-donorsList.appendChild(li);
-});
-
-let percent = (total / 6000) * 100;
-document.getElementById("progressBar").style.width = percent + "%";
-}
-
-loadDonors();
-
-</script>
-
 </body>
-</html>
+  </html>
